@@ -4,25 +4,25 @@ import streamlit as st
 import requests
 import json
 
-# URL de tu API de FastAPI (cuando se ejecuta con Docker Compose)
+# URL de API de FastAPI
 API_URL = "http://localhost:8080"
 
 st.set_page_config(page_title="Once Upon a -90s- Story Generator", layout="centered")
 
-# El título de la aplicación Streamlit se actualiza aquí
+# Título Streamlit 
 st.title("📚 Once Upon a -90s- Story Generator") 
 st.markdown("""
 ¡Bienvenido al generador de historias de los 90! 📼🕹️ ¿Qué tal una aventura hilarante 
 donde los jóvenes de hoy se enfrentan a la tecnología retro?
 """)
 
-# --- Sección para Generar Nueva Historia ---
+# --- Generar Nueva Historia ---
 st.header("✨ Generar una Nueva Historia de los 90")
 
 with st.form("generate_story_form"):
     title = st.text_input("Título de la Historia", placeholder="El Día que el WiFi Desapareció")
     
-    # Personajes válidos (debe coincidir con tu backend)
+    # Personajes válidos
     PERSONAJES_VALIDOS = ["Rafa", "Alex", "Hugo", "Cris", "Dani", "Pau", "Arturo", "Juan", "Karla", "Eric", "Alberto"]
     protagonists = st.multiselect(
         "Selecciona los Protagonistas",
@@ -45,7 +45,7 @@ with st.form("generate_story_form"):
                 }
                 
                 with st.spinner("Generando tu aventura de los 90... esto puede tardar un momento..."):
-                    # Se añade un timeout para evitar esperas infinitas
+                   
                     response = requests.post(f"{API_URL}/generate_story/", json=payload, timeout=120) 
 
                 if response.status_code == 201:
@@ -66,7 +66,7 @@ with st.form("generate_story_form"):
 
 st.markdown("---")
 
-# --- Sección para Ver Historias Guardadas ---
+# --- Historias Guardadas ---
 st.header("📖 Historias Guardadas")
 
 if st.button("Recargar Historias"):
@@ -93,7 +93,7 @@ if st.button("Recargar Historias"):
     except Exception as e:
         st.error(f"Ocurrió un error inesperado: {e}")
 
-# Cargar historias al inicio
+# Cargar historias 
 if 'initial_load' not in st.session_state:
     st.session_state.initial_load = True
     try:
