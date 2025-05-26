@@ -1,7 +1,7 @@
 # Once-Upon-A-90s/start.sh
 #!/bin/bash
 
-echo "🚀 Iniciando 'Once Upon a -90s- API'..." # Nombre actualizado aquí
+echo "🚀 Iniciando 'Once Upon a -90s- API'..."
 
 echo "1. Apagando y eliminando contenedores Docker existentes (si los hay)..."
 docker-compose down
