@@ -19,7 +19,7 @@ from sqlalchemy.orm import sessionmaker, Session
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 if not GEMINI_API_KEY:
-    raise ValueError("GEMINI_API_KEY no encontrada en las variables de entorno. Asegúrate de configurar tu archivo .env en la raíz del proyecto.")
+    raise ValueError("GEMINI_API_KEY no encontrada")
 
 genai.configure(api_key=GEMINI_API_KEY)
 gemini_model = genai.GenerativeModel('gemini-1.5-flash')
@@ -79,7 +79,6 @@ class StoriesListResponse(BaseModel):
 
 # --- 3. Inicialización de la Aplicación FastAPI ---
 
-# El título de la API se actualiza aquí
 app = FastAPI(
     title="Once Upon a -90s- API",
     description="API REST para generar historias cómicas de los 90 con Google Gemini, y almacenarlas en SQLite.",
@@ -151,7 +150,7 @@ async def read_root():
     <body>
         <div class="container">
             <h1>Bienvenido a la API "Once Upon a -90s-"</h1>
-            <p>Esta API genera historias cómicas y nostálgicas ambientadas en los años 90 con Google Gemini, y las almacena en una base de datos SQLite.</p>
+            <p>Esta API genera historias cómicas ambientadas en los años 90 con Google Gemini, y las almacena en una base de datos SQLite.</p>
             
             <h2>Endpoints disponibles:</h2>
             <ul>
