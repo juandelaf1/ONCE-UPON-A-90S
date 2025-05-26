@@ -77,7 +77,7 @@ Google Gemini: Modelo de IA para generación de texto.
 SQLite: Base de datos ligera y persistente.
 SQLAlchemy & Pydantic: ORM y validación de datos para buenas prácticas.
 Docker & Docker Compose: Contenerización y orquestación.
-Streamlit: Frontend interactivo (opcional).
+Streamlit: Frontend interactivo .
 
 📝 Autor
 
