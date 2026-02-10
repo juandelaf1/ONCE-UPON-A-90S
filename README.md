@@ -1,5 +1,8 @@
 # 📼🕹️ Once Upon a -90s-: Historias con IA y Nostalgia 🚀
 
+<img width="2000" height="1124" alt="once_upon_a_90s_banner" src="https://github.com/user-attachments/assets/f2edbff4-4629-4ae4-9ff2-f12d5cd84a2b" />
+>  **La inteligencia artificial viaja al pasado para contar historias noventeras**
+
 🎯 ¿Qué es este proyecto?
 Este proyecto busca crear un espacio donde los jóvenes actuales puedan descubrir cómo era la vida en los años 90, a través de historias generadas con inteligencia artificial. Hoy en día, la tecnología ha transformado la forma en que interactuamos, trabajamos y nos divertimos. Sin embargo, los años 90 fueron una época única, marcada por la creatividad, la exploración sin pantallas y la conexión social sin redes digitales.
 
